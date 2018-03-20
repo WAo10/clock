@@ -17,12 +17,30 @@ import java.time.ZoneId;
    With either method, you'll need to extract the hours and
    minutes as a substring.
 */
+import java.time.*;
+import java.lang.*;
 public class Clock
 {
    // Your work goes here
-   . . .
+   String time;
+   public Clock(){
+       time = LocalDateTime.ofInstant(Instant.now(), ZoneId.systemDefault()).toString();
+    }
 
-
+    public String getTime()
+    {
+        return getHours()+":"+getMinutes();
+    }
+    
+    public int getHours()
+    {
+        return Integer.parseInt(time.substring(11, 13));
+    }
+    
+    public int getMinutes()
+    {
+        return Integer.parseInt(time.substring(14, 16));
+    }
 
 
 

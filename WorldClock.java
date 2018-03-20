@@ -8,15 +8,23 @@
 public class WorldClock extends Clock
 {
    // Your work goes here
-   . . .
-
-
-
-
-
-
-
-
-
+   int off;
+   public WorldClock(int offset)
+   {
+       super();
+       off=offset;
+    }
+    
+   public int getHours()
+   {
+       int result;
+       result = super.getHours();
+       result+=off;
+       if (result > 24)
+       {
+           result = result - 24;
+        }
+       return result;
+    }
 
 }

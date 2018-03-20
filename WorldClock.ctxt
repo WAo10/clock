@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=offset
+comment0.target=WorldClock(int)
+comment1.params=
+comment1.target=int\ getHours()
+numComments=2
