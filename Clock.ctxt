@@ -7,4 +7,6 @@ comment2.params=
 comment2.target=int\ getHours()
 comment3.params=
 comment3.target=int\ getMinutes()
-numComments=4
+comment4.params=hours\ minutes
+comment4.target=java.lang.String\ setAlarm(int,\ int)
+numComments=5

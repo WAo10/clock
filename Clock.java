@@ -17,19 +17,21 @@ import java.time.ZoneId;
    With either method, you'll need to extract the hours and
    minutes as a substring.
 */
+import java.text.DecimalFormat;
 import java.time.*;
 import java.lang.*;
 public class Clock
 {
    // Your work goes here
-   String time;
+   private DecimalFormat dec = new DecimalFormat("00");
+   private String time;
    public Clock(){
        time = LocalDateTime.ofInstant(Instant.now(), ZoneId.systemDefault()).toString();
     }
 
     public String getTime()
     {
-        return getHours()+":"+getMinutes();
+        return getHours()+":"+dec.format(getMinutes());
     }
     
     public int getHours()
@@ -42,6 +44,18 @@ public class Clock
         return Integer.parseInt(time.substring(14, 16));
     }
 
+    public String setAlarm(int hours, int minutes)
+    {
+        boolean bool = true;
+        while(bool==true)
+        {
+            if(getHours()==hours && getMinutes()==minutes)
+            {
+                bool=false;
+            }
+        }
+        return getTime();
+    }
 
 
 

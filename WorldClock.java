@@ -8,7 +8,7 @@
 public class WorldClock extends Clock
 {
    // Your work goes here
-   int off;
+   private int off;
    public WorldClock(int offset)
    {
        super();
